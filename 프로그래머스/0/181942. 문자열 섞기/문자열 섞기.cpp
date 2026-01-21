@@ -4,13 +4,11 @@
 using namespace std;
 
 string solution(string str1, string str2) {
-    string answer;
-    answer.resize(str1.length() + str2.length());
+    string answer = "";
 
-    for (int i = 0; i < str1.length(); i++) {
-        answer[2*i]     = str1[i];
-        answer[2*i + 1] = str2[i];
+    for(int i = 0; i < str1.length(); i++) {
+        answer.push_back(str1[i]);
+        answer.push_back(str2[i]);
     }
-
     return answer;
 }

@@ -5,31 +5,20 @@ using namespace std;
 
 int solution(int a, int b, int c) {
     int answer = 0;
-    int x = a + b + c;
-    int y = (a * a) + (b * b) + (c * c);
-    int z = (a * a * a) + (b * b * b) + (c * c * c);
-    
-    if(a == b) {
-        if(b == c) 
-            answer = x * y * z; //모든 숫자가 같을때
-        else
-            answer = x * y; //한 숫자만 같을때
+
+    if(a == b && a == c) //3개의 수가 모두 같을때
+    {
+        answer = (a+b+c)*(a*a+b*b+c*c)*(a*a*a+b*b*b+c*c*c);
     }
-    else if(b == c) {
-        if(a == c)
-            answer = x * y * z;
-        else
-            answer = x * y;
+    else if(a == b || a == c || b == c) //2개의 수가 모두 같을때
+    {
+        answer = (a+b+c)*(a*a+b*b+c*c);
     }
-    else if(a == c) {
-        if(b == c)
-            answer = x * y * z;
-        else
-            answer = x * y;
+    else //모두 다를때
+    {
+        answer = (a+b+c);
     }
-    else
-        answer = x;
-    
+
     return answer;
 }
 

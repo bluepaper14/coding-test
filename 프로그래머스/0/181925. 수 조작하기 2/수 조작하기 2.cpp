@@ -19,3 +19,5 @@ string solution(vector<int> numLog) {
 
     return answer;
 }
+//앞뒤 배열의 숫자의 변화를 보고 얼만큼 더하고  뺏는지 확인하면됨.
+//그러면 이전 이후의 변화가능한 방법은 4가지이니 말이다.

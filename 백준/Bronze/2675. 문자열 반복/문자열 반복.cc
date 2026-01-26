@@ -10,7 +10,7 @@ int main() {
 	cin >> T;
 	for (int i = 0; i < T; i++) {
 		cin >> R >> name;
-			for (size_t j = 0; j < name.length(); j++) {
+			for (int j = 0; j < name.length(); j++) {
 				for (int x = 0; x < R; x++) 
 					cout << name[j];
 			}

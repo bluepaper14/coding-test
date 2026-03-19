@@ -8,11 +8,11 @@ using namespace std;
 int main() {
     int A = 0;
     int B = 0;
+    
+    string x;
+    string y;
 
-    cin >> A >> B;
-
-    string x = to_string(A);
-    string y = to_string(B);
+    cin >> x >> y;
     
     reverse(x.begin(), x.end());
     reverse(y.begin(), y.end());

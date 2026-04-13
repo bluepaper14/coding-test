@@ -11,7 +11,8 @@ int solution(int k, int m, vector<int> score) {
     
     int val = score.size() / m; //몇 묶음인지 파악?
     vector<int> temp; //임시벡터 생성
-    for(int i = m - 1; i < score.size(); i += m) {
+    for(int i = m - 1; i < score.size(); i += m) { //정렬의 값중 가장 작은 값은 끝자리 이기 때문에 m - 1이다. 
+        //이를 i += m으로 하여 증감. 묶음이 넘어가지 않을정도만.
         answer += (score[i] * m);
     }
     return answer;
